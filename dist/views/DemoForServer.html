@@ -1,0 +1,28 @@
+<section class="content"> <div>{{text}}</div> <table class="table table-striped"> <thead> <tr> <th>编号</th> <th>姓名</th> <th>电话</th> <th>电邮</th> <th>地址</th> <th>操作</th> </tr> </thead> <tbody repeatope ng-repeat="contact in contacts"> <tr> <!--<th>{{contact.Id}}</th>
+            <th>{{contact.Name}}</th>
+            <th>{{contact.PhoneNo}}</th>
+            <th>{{contact.EmailAddress}}</th>
+            <th>{{contact.Address}}</th>--> <th><input style="BACKGROUND-COLOR: transparent" ng-model="contact.Id"></th> <th><input style="BACKGROUND-COLOR: transparent" ng-model="contact.Name"></th> <th><input style="BACKGROUND-COLOR: transparent" ng-model="contact.PhoneNo"></th> <th><input style="BACKGROUND-COLOR: transparent" ng-model="contact.EmailAddress"></th> <th><input style="BACKGROUND-COLOR: transparent" ng-model="contact.Address"></th> <th ng-show="!isShow"> <button ng-click="edit(contact)">编辑</button> <button ng-click="delete(contact)">删除</button> </th> <th ng-show="isShow"> <button ng-click="save(contact)">保存</button> <button ng-click="cancel(contact)">取消</button> </th> </tr> <!--<tr>
+            <th>{{contact.Id}}</th>
+            <th><input readonly="isConfig" style="BACKGROUND-COLOR: transparent" ng-model="contact.Name"></input></th>
+            <th><input readonly="isConfig" style="BACKGROUND-COLOR: transparent" ng-model="contact.PhoneNo"></input></th>
+            <th><input readonly="isConfig" style="BACKGROUND-COLOR: transparent" ng-model="contact.EmailAddress"></input></th>
+            <th><input readonly="isConfig" style="BACKGROUND-COLOR: transparent" ng-model="contact.Address"></input></th>
+            <th>
+                <button ng-click="edit(contact)">编辑</button>
+                <button ng-click="delete(contact)">删除</button>
+            </th>
+        </tr>--> </tbody> <tbody ng-show="isEdit"> <tr> <th><input style="BACKGROUND-COLOR: transparent" ng-model="contact.Id"></th> <th><input style="BACKGROUND-COLOR: transparent" ng-model="contact.Name"></th> <th><input style="BACKGROUND-COLOR: transparent" ng-model="contact.PhoneNo"></th> <th><input style="BACKGROUND-COLOR: transparent" ng-model="contact.EmailAddress"></th> <th><input style="BACKGROUND-COLOR: transparent" ng-model="contact.Address"></th> <th> <button ng-click="save(contact)">保存</button> <button ng-click="cancel(contact)">取消</button> </th> </tr> </tbody> </table> <button ng-click="edit()">新增</button> <!--<div class='modal fade'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">编辑联系人信息</h4>
+            </div>
+            <div class="moda1-body form-horizonta1">
+                <div class="form-group">
+                    <span>姓名：</span><input ng-model="contact.Name"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>--> </section>
